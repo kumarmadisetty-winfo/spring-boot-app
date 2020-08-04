@@ -1,0 +1,23 @@
+insert into country values(1,'INDIA');
+insert into country values(2,'RUSSIA');
+insert into country values(3,'CANADA');
+insert into country values(4,'CHINA');
+insert into country values(5,'SRILANKA');
+insert into country values(6,'UK');
+insert into country values(7,'US');
+insert into country values(8,'ROMANIA');
+
+insert into state values(1,'Hyderabad',1);
+insert into state values(2,'Delhi',1);
+insert into state values(3,'Alberta',3);
+insert into state values(4,'Manitoba',3);
+insert into state values(5,'Colombo',5);
+insert into state values(6,'Gampaha',5);
+insert into state values(7,'Komi',2);
+insert into state values(8,'Buryat',2);
+insert into state values(9,'Beijing',4);
+insert into state values(10,'Hong Kong',4);
+insert into state values(11,'England',6);
+insert into state values(12,'Wales',6);
+insert into state values(13,'NewYork',7);
+insert into state values(14,'Texas',7);
