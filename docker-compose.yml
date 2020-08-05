@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   springboot-docker-compose-mysql-app-container:
     image: springboot-docker-compose-mysql-app:latest
