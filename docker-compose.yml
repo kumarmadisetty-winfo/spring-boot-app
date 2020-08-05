@@ -1,19 +1,14 @@
-version: '3'
-
+version: '3.5'
 services:
-  mysql-standalone-container:
-    image: mysql:5.7
-    env_file: .env
-    ports:
-      - 3306:3306
-    volumes:
-      - ./../tps-db/data:/var/lib/mysql:rw
-      - ./../tps-db/schema:/docker-entrypoint-initdb.d:ro
   springboot-docker-compose-mysql-app-container:
-    image: springboot-docker-compose-mysql-app:1
+    image: springboot-docker-compose-mysql-app:latest
+    container_name: springbootdockercontainer
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://192.168.99.100:3306/testdb?useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=testuser
+      - SPRING_DATASOURCE_PASSWORD=testuser@123
+      - SPRING_PROFILES_ACTIVE=docker
     ports:
         - 8084:8084
-    depends_on:
-      - mysql-standalone-container
     volumes:
-      - /data/springboot-docker-compose-mysql-app
+      - /e/sudheer/stsworkspace/springdocker/tmp:/tmp
